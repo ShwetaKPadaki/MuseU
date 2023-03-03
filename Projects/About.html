@@ -1,0 +1,162 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <title>Document</title>
+    <style>
+        .about{
+        
+    display: block;
+    float:right;
+    margin-top: 10%;
+    margin-left: 50%;
+    margin-right: 15%;
+    position: absolute;
+    top: 30px;
+    overflow: scroll;
+    scroll-behavior: smooth;
+   
+}
+
+@media(max-width:768px){
+.slideshow-container{
+  all: unset;
+  width: 1000px;
+  height: 100%;
+  }
+  .about{
+  all: unset;
+  position: fixed;
+}
+  }
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  
+  height: auto;
+  max-width: 50%;
+  position: relative;
+  margin: auto;
+  margin-top: 10%;
+  margin-left: 10%;
+ 
+}
+
+
+
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+ 
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes slide{
+  0%{
+    transform: translate3d(0, 0, 0);
+  }
+  100%{
+    transform: translate3d(1692px, 0, 0);
+    transition: 0.5s;
+  }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+    </style>
+</head>
+<body>
+    <!--Navigation bar-->
+<div id="nav-placeholder">
+
+</div>
+
+<script>
+$(function(){
+  $("#nav-placeholder").load("nav.html");
+});
+</script>
+<!--end of Navigation bar-->
+
+    
+    
+    <div class="slideshow-container">
+<div class="mySlides fade">
+   <img src="image1.jpg" style="width:50%">
+ </div>
+
+<div class="mySlides fade">
+    <img src="image2.jpg" style="width:50%">
+ </div>
+
+<div class="mySlides fade">
+   <img src="image3.jpg" style="width:50%">
+ </div>
+
+<div class="mySlides fade">
+   <img src="image4.jpg" style="width:50%">
+ </div>
+
+<div class="mySlides fade">
+   <img src="image5.jpg" style="width:50%">
+ </div>
+
+</div>
+<br>
+
+
+    <!-- About Page content -->
+    <div class="about" id="About">
+      <h3>About US</h3>
+      <p> Started On 11 Apr 2015 with mind of bringing tailoring sophistication at your doorstep, Designer On Call is India’s first of its kind service, where all your tailoring needs are fulfilled under one roof. Ardent follower of Givenchy’s statement that a dress must follow the body and not the other way round. Designer On Call stands for strong personal style. Creative owners at Designer On Call believe in deciphering the myth that individualized patterns can be time-consuming and expensive.
+        With the influx of ready- to- wear designer labels, made-to-measure custom stitching is considered passé. With the time crunch and living on the deadline phase, all segments seem to pull up their schedules for mall hopping. Hunting for the perfect tuxedo or an oomph factor cocktail gown inside the brick and mortar stores has its own limitations. At times, your size, style, choice of fabric or certain colour is not available.
+         Designer on Call is all about made- to- measure and cut-to-fit philosophy. Custom tailoring is synonymous with perfection in measurements, choice of fabric, colour, pattern, collar and cuffs et al. A nascent venture but elegance and sophistication best describes Designer On Call’s services. With design focus on craftsmanship and aesthetics, Designer On Call custom tailored and bespoke services are talk of the town – Gurgaon to Noida. Our aim is to provide an experience that epitomizes the age old craft of refined tailoring.
+         Beautiful fabrics, chic designs, exceptional craftsmanship, and fine attention to detail, we know our client’s requirements. Our team of fashion designers are so inspired by the sophistication and elegance. Our team showcases the workmanship that had been handed down from generation to generation. At Designer On Call, we offer exceptional fitting to our made to measure garments. We aim to fit into the specific client needs as we as a brand stand has an affinity for combining perfect fit with exquisite details. Our stitched pieces speak for itself like a graceful statement.
+         All stitched in the Delhi boutique with constant involvement of our fashion designers who arrive at your place with design book and leave with your measurements. The made-to-measure designs consist of hand- made embroidery created by experienced hands that combine finesse with trends. We provide in vogue color palettes and embroidery details. Our team always constantly research for the latest textile trends, looks for the finesse in design. The bespoke services are tailored for fashion junkie who loves to embrace the latest fad.
+      </p>
+      </div>
+<script>
+    function about(){
+const abt = document.getElementById("About");
+abt.style.display = "block";
+}
+
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+ 
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+
+  slides[slideIndex-1].style.display = "block";  
+ 
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+    </script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+      <title>Document</title>
+      <style>
+       
+       @media(max-width:768px){
+.FormValidate{
+  all: unset;
+}
+  }
+
+        
+        body{
+            background-color: bisque;
+        }
+        
+        
+        
+        #FormValidate{
+            background-color: white; 
+            width: 30%;
+            text-align: center;
+            border: 10px solid darkolivegreen;
+            border-radius: 30px; 
+            box-shadow: 0 0 25px rgba(0,0,0,0);
+            height: 400px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            margin: auto;
+            margin-top: 5%;
+            padding: 30px;
+        } 
+        #fname,#email,#phone{
+          position: relative;
+            width: 250px;
+            height: 25px;
+            background-color: lightgray;
+            border: lightgray;
+           
+        }
+        #msg{
+            width: 250px;
+            height: 100px;
+            background-color: lightgray;
+            border: lightgray;
+        }
+        
+        #fname:focus,#lname:focus,#phone:focus, #exp:focus, msg:focus{
+            background: gray;
+        
+        }
+        
+      </style>
+   </head>
+   <body>
+           <!--Navigation bar-->
+          <div id="nav-placeholder">
+
+            </div>
+
+        <script>
+          $(function(){
+              $("#nav-placeholder").load("nav.html");
+          });
+        </script>
+      <!--end of Navigation bar-->
+
+      <h2>Student Contact Form</h2>
+      <div class="FormValidate">
+      <form action="https://formsubmit.co/muse012023@gmail.com" method="POST">
+       <!-- Student Name:<br><input type="text" name="sname"> <br>
+         Student Subject:<br><input type="text" name="ssubject"><br>
+         <input type="submit" value="Send"> --> 
+
+         <label for="fname">First name:</label><br>
+         <input type="text" id="fname" name="name" placeholder="Name*" required><br>
+         <label for="email">EmailId:</label><br>
+         <input type="text" id="email" name="email" placeholder="Email*" required><br>
+         <label for="phone">Phone:</label><br>
+         <input type="text" id="phone" name="phone" placeholder="phone*" required><br>
+           <label for="Message">Message:</label><br>
+         <input type="text" id="msg" name="msg" placeholder="msg*" required><br><br><br><br>
+         <input type="submit" value="Send">
+      </form>
+   </div>
+   </body>
+</html>
+
+-

@@ -1,0 +1,83 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <title>Document</title>
+    <style>
+        .works{
+    display: block;
+    float:left;
+    margin-top: 10%;
+    margin-left: 50%;
+    margin-right: 15%;
+    position: absolute;
+    top: 30px;
+   
+}
+.myimage {
+  height: auto;
+  max-width: 50%;
+  position: relative;
+  margin: auto;
+  margin-top: 10%;
+  margin-left: 10%;
+ 
+}
+
+@media(max-width:768px){
+.myimage{
+  all: unset;
+   }
+   .myimage{
+    margin-top:30%;
+   }
+   
+  .works{
+  all: unset;
+  position: fixed;
+}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+    </style>
+</head>
+
+<body>
+<!--Navigation bar-->
+<div id="nav-placeholder">
+
+</div>
+
+<script>
+$(function(){
+  $("#nav-placeholder").load("nav.html");
+});
+</script>
+<!--end of Navigation bar-->
+
+   
+    <div class="myimage">
+        <img src="how-it-works-video-screen.jpg" style="width:50%">
+      </div>
+      <br> <br>
+
+      <!-- About Page content -->
+<div class="works" id="About">
+    <h3>How it Works</h3>
+    <p>We provide doorstep services for your stitching needs and we send our consultants (Fashion Designers) to your home
+         or office. They help you with choosing design of a garment, taking measurements and collecting fabric from you.
+         Post which the stitching happens at our workshop and then we get it delivered to you
+         <br> <br>
+         Write to us: Maggie@Maheshwari
+        <br> <br>
+        Call us: +91-70222-39955</p>
+        </div>
+
+    </body>
+    </html>
+    

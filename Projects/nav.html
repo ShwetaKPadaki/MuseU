@@ -1,0 +1,139 @@
+
+
+
+<style>
+    header{
+        background-color: gray;
+        width:100%;
+        height: 40px;
+        color:yellow;
+             }
+    header a{
+        text-decoration: none;
+        color: yellow;
+        padding: 130px;
+      
+    }
+    i{
+      display: flex;
+      float: right;
+      margin-right: 30px;
+      margin-top: -10px;
+      border-radius: 80%;
+      padding: 2px;
+      border: 2px solid yellow;
+    }
+    div.topnav {
+/* the sidebar is fixed even if the window is scrolled down.*/ 
+list-style-type: none;
+background-color:bisque;
+display: flex;
+width:100%;
+transition: 0.5s;
+align-items: center;
+justify-content: center;
+}
+div.topnav a {
+padding: 15px;
+text-decoration: none;
+color: black;
+display: block;
+transition: 3s; 
+align-items: center;
+justify-content: space-between;
+}
+div.topnav a:hover {
+    background-color: palevioletred;
+  }
+  .div{
+    float:left;
+  }
+  /* The dropdown container */
+  .dropdown {
+    float: left;
+    overflow: hidden;
+   /* border: 2px;*/
+  }
+  /* Dropdown button */
+  .dropdown .dropbtn {
+    font-size: 16px; 
+    border: none;
+    outline: none;
+    background-color: inherit;
+  /*  font-family: inherit; /* Important for vertical align on mobile phones */
+    margin: 0; /* Important for vertical align on mobile phones */
+  }
+  /* Dropdown content (hidden by default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: bisque;
+   /* min-width: fit-content;
+   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+   box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.2); */
+    z-index: 1; 
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    float: none;
+    color: black;
+    font-size: 16px;
+    padding: 0;
+    text-decoration: none;
+    display: flex;
+    text-align: left;
+  }
+  
+  
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+    
+  }
+  @media(max-width:768px)
+{
+  header{
+    display: none;
+  }
+  div.topnav a {
+      padding: 10px;
+      font-size: 14px;
+  }
+  .dropdown-content a {
+    font-size: 14px;
+  }
+}
+
+</style>
+
+
+<header>We Serve: Mon – Sun 10 AM – 7 PM <a href="#">+91-70222-39955</a><a href="#">Maggie@Maheshwari</a>
+    <div class="SocialMedia"> <a href="#" class="facebook"><i class="fa fa-facebook"></i></a><a href="#" class="google"><i class="fa fa-google"></i></a><a href="#" class="instagram"><i class="fa fa-instagram"></i></a> 
+  </div> 
+</header>
+<div class="topnav" id="topnav">
+  <!-- <a href="About.html">Link to About Page </a> -->
+      <a href="Muse.html">Home</a>
+      <a href= "About.html" >AboutUs</a>
+    <div class="dropdown">
+  <button class="dropbtn">Services
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-content">
+
+   <a href="MenFashion.html">Custom Tailor For Men</a>
+   <a href="WomenFashion.html">Designer Boutique for Women</a>
+    <a href="KidsFashion.html">Custom Tailor FOr Kids</a>
+ <!--  <a href="#">Alterations & Repair</a>
+   <a href="#">Corporate Tailoring</a>
+   <a href="#">Transformation</a> -->
+   
+  
+  </div>
+</div>
+    <a href="HowItWorks.html">How It Works</a>
+    <a href="ContactUs.html">Contact Us</a>
+</div>
+    

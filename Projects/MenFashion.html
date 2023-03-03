@@ -1,0 +1,147 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <title>Document</title>
+    <style>
+        .about{
+    display: block;
+    float:right;
+    margin-top: 10%;
+    margin-left: 50%;
+    margin-right: 15%;
+    position: absolute;
+    top: 30px;
+    overflow: scroll;
+    scroll-behavior: smooth;
+}
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  height: auto;
+  max-width: 50%;
+  position: relative;
+  margin: auto;
+  margin-top: 10%;
+  margin-left: 10%;
+ 
+}
+
+
+
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+ 
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes slide{
+  0%{
+    transform: translate3d(0, 0, 0);
+  }
+  100%{
+    transform: translate3d(1692px, 0, 0);
+    transition: 0.5s;
+  }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+@media(max-width:768px){
+   .slideshow-container {
+    height: auto;
+    max-width: 300px;
+}
+}
+
+    </style>
+</head>
+<body>
+    <!--Navigation bar-->
+<div id="nav-placeholder">
+
+</div>
+
+<script>
+$(function(){
+  $("#nav-placeholder").load("nav.html");
+});
+</script>
+<!--end of Navigation bar-->
+
+    <!-- About Page content -->
+<div class="about" id="About">
+    <h3>About US</h3>
+    <p> Designer On Call’s fit and artistry has gained loyal clientele as one of the best gents tailor in Delhi. For end-to end wardrobe stitching, our team make the entire process deadline oriented, spanning from picking the fabric to designing easy and completely affordable. With great style comes customised fit, as one of the best custom tailors in Delhi, Designer On Call swears by its cut.
+        The team designs as per the shape of your measurements keeping in mind the minute detailing for neckline, hemline and sleeves. Think about avant garde tuxedo to rhinestone embroidered sherwanis and sassy waistcoats, Designer-on-Call has everything set on the platter. The wedding couture trends in jodhpuris, bandhgala, sherwanis and tuxedos are worth every nip and stitch. The team of designers can go on talking about individualistic styles like shawl collars, dinner suit style, one-button, with angled pockets and peak lapels. An impeccably tailored suit will make you stand out in the crowd. As one of the best gents tailor in Delhi, Designer-on Call believes that bespoke custom look is guaranteed to never go out of style.
+        As one of the best men tailor, Designer-on Call is worn and loved by the premium clients across globe . We took a bow when Hamid Karzai went a step ahead and applauded the Pashtun attire stitched by Designer-on-Call. Custom tailoring is synonymous with perfection in measurements, choice of fabric, colour, pattern, collar and cuffs et al. After all, we believe that looking great shouldn’t be that difficult for you. Our team believe in doing things a little differently and that makes us the best gent tailor in Delhi. Our fashion executive and cutter come directly to your home or office anywhere. You can get a feel of the fabric texture and our cutter would show you full-canvas construction too.
+        We take pride as custom tailors par excellence on Gurgaon region too.
+        As one of the best men tailor, Designer-on Call is worn and loved by the former President of Afghanistan Hamid
+         Karzai too. We took a bow when Hamid Karzai went a step ahead and applauded the Pashtun attire stitched by 
+         Designer-on-Call. Custom tailoring is synonymous with perfection in measurements, choice of fabric, colour,     
+         pattern, collar and cuffs et al. After all, we believe that looking great shouldn’t be that difficult for you. Our team believe in doing things a little differently and that makes us the best gent tailor in Delhi.
+         </p>
+        </div>
+    
+    
+    <div class="slideshow-container">
+<div class="mySlides fade">
+   <img src="MenImg.jpg" style="width:50%">
+ </div>
+
+<div class="mySlides fade">
+    <img src="MenImg1.jpg" style="width:50%">
+ </div>
+
+<div class="mySlides fade">
+   <img src="MenImg2.jpg" style="width:50%">
+ </div>
+
+
+</div>
+<br>
+<script>
+    function about(){
+const abt = document.getElementById("About");
+abt.style.display = "block";
+}
+
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+ 
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+
+  slides[slideIndex-1].style.display = "block";  
+ 
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+    </script>
+</body>
+</html>
